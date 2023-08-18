@@ -12,12 +12,103 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="">
+    <header class="container mx-auto mt-4">
       <h1 class="text-5xl text-center text-[#31A5AC] font-bold">
         Money Master💰
       </h1>
     </header>
-    <main></main>
+    <main class="container mx-auto mt-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="">
+          <img
+            class="lg:w-[705px] lg:h-[800px]"
+            src="./941e03936fb24ab5b85114fb15c38f44.jfif"
+            alt=""
+          />
+        </div>
+        <div class="text-center pt-11 bg-[#F8F8F8] text-black">
+          <h1 class="text-2xl font-medium">Income</h1>
+          <p class="text-xl m-7">
+            Income:
+            <input
+              class="bg-[#DCDCDC] border px-4 rounded-sm py-2"
+              type="number"
+              name=""
+              id="income-id"
+              placeholder="Enter your income"
+            />
+          </p>
+          <h1 class="text-2xl font-medium mb-5">Expenses</h1>
+          <p class="text-xl">
+            Food:
+            <input
+              class="bg-[#DCDCDC] border px-4 py-2 rounded-sm"
+              type="number"
+              name=""
+              id="food-id"
+              placeholder="Food Expense"
+            />
+          </p>
+          <p class="text-xl m-5">
+            Rent:
+            <input
+              class="bg-[#DCDCDC] border px-4 py-2 rounded-sm"
+              type="number"
+              name=""
+              id="rent-id"
+              placeholder="Rent Expense"
+            />
+          </p>
+          <p class="text-xl">
+            Clothes:
+            <input
+              class="bg-[#DCDCDC] border px-4 py-2 rounded-sm"
+              type="number"
+              name=""
+              id="clothes-id"
+              placeholder="Clothes expense"
+            />
+          </p>
+          <button
+            onclick="calculateClick()"
+            id="calculate-btn"
+            class="btn text-white mt-5 bg-[#59A5FF]"
+          >
+            Calculate
+          </button>
+          <h1 class="text-2xl m-5 font-medium">
+            Total Expenses: <span id="total-expense-id"></span>
+          </h1>
+          <h1 class="text-2xl font-medium">
+            Balance: <span id="total-balance"></span>
+          </h1>
+          <p class="text-xl">
+            Save:
+            <input
+              class="bg-[#DCDCDC] border px-4 py-2 w-1/6 rounded-sm"
+              type="number"
+              name=""
+              id="save-id"
+              placeholder="save %"
+            />
+            %
+            <button
+              onclick="saveClick()"
+              id="save-btn"
+              class="btn px-11 mt-5 text-white bg-[#59A5FF]"
+            >
+              Save
+            </button>
+          </p>
+          <h1 class="text-2xl m-5 font-medium">
+            Saving Amount: <span id="saving-amount-id"></span>
+          </h1>
+          <h1 class="text-2xl font-medium">
+            Remaining Balance: <span id="remaining-balance"></span>
+          </h1>
+        </div>
+      </div>
+    </main>
     <script src="./scripts/calculation.js"></script>
   </body>
 </html>
